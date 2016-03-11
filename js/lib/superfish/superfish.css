@@ -89,26 +89,32 @@
     transition: background .2s;
     border-radius: 3px;
 }
+
+.sf-menu > li:hover{
+     background: rgba(0, 0, 0, 0.05);   
+}
+
 .sf-menu ul li {
-    background: url(../../../images/template/header-bg.PNG) center repeat scroll;
+    background: rgba(0, 0, 0, 0.75) none repeat scroll 0% 0%;
     border-radius: 0;
 }
 
 .sf-menu ul li a {
     text-align: left;
+    color: #fff;
 }
 
 .sf-menu ul li:hover {
-    background: url(../../../images/template/header-bg.PNG) center repeat scroll;
+    background: rgba(0, 0, 0, 0.75) none repeat scroll 0% 0%;
 }
 
 .sf-menu ul ul li {
-    background: url(../../../images/template/header-bg.PNG) center repeat scroll;
+    background: rgba(0, 0, 0, 0.75) none repeat scroll 0% 0%;
     border-radius: 0;
 }
 
 .sf-menu ul ul li:hover {
-    background: url(../../../images/template/header-bg.PNG) center repeat scroll;
+    background: rgba(0, 0, 0, 0.75) none repeat scroll 0% 0%;
 }
 
 .sf-menu li:hover,
