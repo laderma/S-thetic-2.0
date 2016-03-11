@@ -1,4 +1,8 @@
-input[type=text], input[type=email],input[type=submit], textarea, select {
+input[type=text],
+input[type=email],
+input[type=submit],
+textarea,
+select {
     padding-left: 45px;
     background-color: rgba(202, 202, 200, 0.5);
     box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.15), 0px 1px 0px rgba(255, 255, 255, 0.1);
@@ -7,7 +11,6 @@ input[type=text], input[type=email],input[type=submit], textarea, select {
     height: 48px;
     -moz-appearance: none;
     border-radius: 3px;
-    background-color: #D6D6D4;
     border-style: solid;
     border-width: 0px;
     border-color: #CCC;
@@ -25,16 +28,18 @@ input[type=text], input[type=email],input[type=submit], textarea, select {
     @include font(300);
 }
 
-textarea{
-    height: 150px;
-}
-input[type=submit]{
-    background-color: rgba(106, 177, 19, 0.5);
-    color: #fff; 
+textarea {
+    height: 150px !important;
+    width: 100% !important;
 }
 
-select{
-    color: rgba(0,0,0,0.5);
+input[type=submit] {
+    background-color: rgba(106, 177, 19, 0.5);
+    color: #fff;
+}
+
+select {
+    color: rgba(0, 0, 0, 0.5);
 }
 
 input[type="text"]:focus,
@@ -69,10 +74,44 @@ input[type="submit"]:hover,
 textarea:focus,
 textarea:hover,
 select:focus,
-select:hover
-{
+select:hover {
     background: #BFBFBB none repeat scroll 0% 0%;
     border-color: #999;
     outline: medium none;
     cursor: pointer;
+    background-size: 20px auto;
+    background-position: 97%;
+    background-repeat: no-repeat;
+}
+
+.icon-avatar, .icon-avatar:hover {
+    background-image: url("../images/template/form/avatar.png") !important;
+    background-size: 20px auto;
+    background-position: 97%;
+    background-repeat: no-repeat;
+}
+
+.icon-email, .icon-email:hover {
+    background-image: url("../images/template/form/email.png") !important;
+    background-size: 20px auto;
+    background-position: 97%;
+    background-repeat: no-repeat;
+}
+.icon-tele, .icon-tele:hover {
+    background-image: url("../images/template/form/tele.png") !important;
+    background-size: 20px auto;
+    background-position: 97%;
+    background-repeat: no-repeat;
+}
+.icon-message, .icon-message:hover {
+    background-image: url("../images/template/form/message.png") !important;
+    background-size: 20px auto;
+    background-position: 97%;
+    background-repeat: no-repeat;
+}
+.icon-location, .icon-location:hover {
+    background-image: url("../images/template/form/location.png") !important;
+    background-size: 20px auto;
+    background-position: 97%;
+    background-repeat: no-repeat;
 }

@@ -2,7 +2,7 @@
         <div id="" class="container" style="">
             <div id="" class="grid" style="">
                <div id="" class="grid-row" style="">
-                   <h2><img src="http://webdev.laderma.net/x/templates/s-thetic.de2.0/images/template/profile.png" class="icon" />Kontakformular</h2>
+                   <h2>Kontakformular</h2>
                    <form>
                         <div id="" class="form-wrapper" style="">
                             <div id="" class="grid" style="">
