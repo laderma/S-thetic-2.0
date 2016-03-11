@@ -1,0 +1,78 @@
+input[type=text], input[type=email],input[type=submit], textarea, select {
+    padding-left: 45px;
+    background-color: rgba(202, 202, 200, 0.5);
+    box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.15), 0px 1px 0px rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    color: #222;
+    height: 48px;
+    -moz-appearance: none;
+    border-radius: 3px;
+    background-color: #D6D6D4;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #CCC;
+    box-shadow: 0px 1px 1px rgba(237, 237, 236, 0.3) inset;
+    color: rgba(0, 0, 0, 0.9);
+    display: block;
+    font-family: inherit;
+    font-size: 1rem;
+    height: 2.4375rem;
+    margin: 0px 0px 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.15s linear 0s, background 0.15s linear 0s;
+    @include font(300);
+}
+
+textarea{
+    height: 150px;
+}
+input[type=submit]{
+    background-color: rgba(106, 177, 19, 0.5);
+    color: #fff; 
+}
+
+select{
+    color: rgba(0,0,0,0.5);
+}
+
+input[type="text"]:focus,
+input[type="text"]:hover,
+input[type="password"]:focus,
+input[type="password"]:hover,
+input[type="date"]:focus,
+input[type="date"]:hover,
+input[type="datetime"]:focus,
+input[type="datetime"]:hover,
+input[type="datetime-local"]:focus,
+input[type="datetime-local"]:hover,
+input[type="month"]:focus,
+input[type="month"]:hover,
+input[type="week"]:focus,
+input[type="week"]:hover,
+input[type="email"]:focus,
+input[type="email"]:hover,
+input[type="number"]:focus,
+input[type="number"]:hover,
+input[type="search"]:focus,
+input[type="search"]:hover,
+input[type="tel"]:focus,
+input[type="tel"]:hover,
+input[type="time"]:focus,
+input[type="time"]:hover,
+input[type="url"]:focus,
+input[type="url"]:hover,
+input[type="color"]:focus,
+input[type="color"]:hover,
+input[type="submit"]:hover,
+textarea:focus,
+textarea:hover,
+select:focus,
+select:hover
+{
+    background: #BFBFBB none repeat scroll 0% 0%;
+    border-color: #999;
+    outline: medium none;
+    cursor: pointer;
+}

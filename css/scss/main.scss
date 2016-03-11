@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300);
+@mixin font($weight) {
+    font-family: "PT Sans", Courier, sans-serif;
+    font-weight: $weight;
+}
+
+@mixin flex() {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but     mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+     */
+}
+
+html,
+body {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    color: #222;
+    cursor: auto;
+    font-family: "PT Sans", Courier, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.5;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.hide{
+    display: none;
+}
+
+.gradientborder {
+    border-style: solid;
+    border-width: 4px 0px 0px;
+    border-image: url("../images/template/gradient.jpg") 4 0 0 0 stretch repeat;
+}
+
+
+@import 'partials/template/header';
+@import 'partials/template/slider';
+@import 'partials/template/content';
+@import 'partials/template/footer';
+@import 'partials/template/module';
+
+@import 'partials/misc/input';
+

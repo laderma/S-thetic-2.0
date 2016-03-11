@@ -1,0 +1,21 @@
+@media screen and (max-width: 1500px){
+    
+    .aside-box {
+	   width: 100%;
+    }
+    
+    .footer{
+        .container{
+            flex-direction: column;
+        }
+    }
+ 
+    .form-wrapper{
+        .grid{
+            .grid-row{
+                width: 100%;
+            }
+        }
+    }
+    
+}

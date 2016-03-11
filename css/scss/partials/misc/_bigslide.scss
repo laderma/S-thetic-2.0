@@ -1,0 +1,37 @@
+.panel {
+    background: #A5A5A5;
+    z-index: 9999;
+    position: fixed;
+    left: -15.625em;
+    /*or width of your navigation panel*/
+    width: 15.625em;
+    /*should match the above value*/
+}
+
+.panel ul {
+    border-top: 1px solid #FFF;
+    list-style-type: none;
+    padding: 0;
+}
+
+.panel a {
+    display: block;
+    border-bottom: 1px solid #FFF;
+    padding: 1em;
+}
+
+.panel a:link,
+.panel a:visited {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.panel a:hover,
+.panel a:active {
+    background: RGBA(0, 0, 0, 0.44);
+}
+
+.nav-icon {
+    margin-right: 6px;
+}

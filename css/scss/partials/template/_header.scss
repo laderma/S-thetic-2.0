@@ -1,0 +1,71 @@
+.header {
+    margin: 0 auto;
+    width: 100%;
+    height: 60px;
+    padding: 10px 0px 10px 0px;
+    background: url("../images/template/header-bg.PNG") center repeat scroll;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #C4C4C0;
+    .grid {
+        margin: 0 auto;
+        width: 90%;
+        @include flex();
+        .grid-row {
+            flex-grow: 1;
+            position: relative;
+            &:nth-child(1) {
+                flex-grow: initial;
+            }
+            &:nth-child(2) {
+                flex-basis: 65%;
+                padding: 5px 0px 0px 50px;
+                .sf-menu {
+                    margin: 0 auto;
+                    width: 100%;
+                    @include flex();
+                    li {
+                        flex-grow: 1;
+                    }
+                    @media screen and (max-width:1200px) {
+                        display: none;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                .tel-info {
+                    display: block;
+                    float: right;
+                    width: auto;
+                    height: auto;
+                    padding: 10px;
+                    background-color: rgba(106, 177, 19, 0.5);
+                    color: #fff;
+                    transition: all ease 0.3s;
+                    .tel-icon {
+                        margin: 4px 10px 5px 5px;
+                        float: left;
+                    }
+                    .tel {
+                        font-size: 20px;
+                        @media screen and (max-width: 1500px) {
+                            display: none;
+                        }
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        background: rgba(0, 0, 0, 0.14) none repeat scroll 0% 0%;
+                        transition: all ease 0.3s;
+                    }
+                }
+            }
+        }
+    }
+    &.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: all 0.4s ease;
+        z-index: 1;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+}

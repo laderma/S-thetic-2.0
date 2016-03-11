@@ -1,0 +1,62 @@
+.module-wrapper {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
+    z-index: 2;
+    overflow: hidden;
+    .choose-tel {
+        margin: 0 auto;
+        width: 400px;
+        height: auto;
+        z-index: 3;
+        h2 {
+            display: block;
+            text-align: center;
+            @include font(300);
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            background: rgba(255, 255, 255, 0.21) none repeat scroll 0% 0%;
+            padding: 10px;
+            border-radius: 3px;
+        }
+        
+        .close-module{
+            cursor: pointer;
+            img{
+                margin: 30px auto;
+                display: block;
+            }
+        }
+        
+        ul {
+            display: block;
+            margin: 0 auto;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            li {
+                @include font(300);
+                color: #fff;
+                text-transform: uppercase;
+                padding: 10px;
+                font-size: 20px;
+                transition: all ease 0.3s;
+                
+                a, a:hover, a:visited{
+                    text-decoration: none;
+                    color: #fff;
+                }
+                
+                &:hover {
+                    transition: all ease 0.3s;
+                    font-size: 25px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

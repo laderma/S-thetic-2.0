@@ -1,0 +1,151 @@
+.footer {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 400px;
+    background: url("../images/template/footer-bg.png") center repeat scroll;
+    padding: 0px 0px 50px 0px;
+    .container {
+        margin: 0 auto;
+        width: 90%;
+        @include flex();
+        @media screen and (max-width: 1500px) {
+            flex-direction: column;
+        }
+        .grid {
+            width: auto;
+            @include flex();
+            flex-grow: 1;
+            @media screen and (max-width: 1000px) {
+                flex-direction: column;
+            }
+            .grid-row {
+                flex-grow: 1;
+                padding: 10px;
+                h2 {
+                    font-size: 1.875rem;
+                    @include font(700);
+                    text-transform: uppercase;
+                    color: rgba(0, 0, 0, 0.72);
+                    .icon {
+                        float: left;
+                        position: relative;
+                        top: 5px;
+                        margin: 5px;
+                    }
+                }
+                .footer-menu {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        font-size: 1.125rem;
+                        text-shadow: 0px 1px 0px #FFF;
+                        list-style-type: none;
+                        margin: 5px auto;
+                        padding: 0;
+                        background: rgba(170, 170, 170, 0.2) none repeat scroll 0% 0%;
+                        transition: all 300ms ease-out 0s;
+                        a {
+                            @include font(300);
+                            color: #222;
+                            font-size: 15px;
+                            text-decoration: none;
+                            padding: 5px 10px;
+                            line-height: 35px;
+                            border-radius: 5px;
+                            transition: all 300ms ease-out 0s;
+                            background: rgba(170, 170, 170, 0) none repeat scroll 0% 0%;
+                        }
+                        &:hover {
+                            background: rgba(170, 170, 170, 0.5) none repeat scroll 0% 0%;
+                            transition: all 300ms ease-out 0s;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+                .form-wrapper {
+                    margin: 0 auto;
+                    width: 100%;
+                    height: auto;
+                    .grid {
+                        @include flex();
+                        flex-direction: column;
+                        .grid-row {
+                            width: auto;
+                            flex-grow: 1;
+                            padding: initial;
+                            @media screen and (max-width: 1500px) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    flex-grow: 2;
+                }
+            }
+        }
+    }
+}
+
+.end{
+    margin: 0 auto;
+    width: 100%;
+    padding: 15px 0px 15px 0px;
+    background: rgba(0,0,0,0.5);
+    
+    .grid{
+        margin: 0 auto;
+        width: 90%;
+        @include flex();
+        
+        @media screen and (max-width:1000px){
+            flex-direction: column;
+        }
+        
+        .grid-row{
+            width: 50%;
+            flex-grow: 1;
+            color: #fff;
+            @include font(300);
+            
+            @media screen and (max-width:1000px){
+                width: 100%;
+            }
+            
+            &:first-child{
+                text-align: left;
+                text-transform: uppercase;
+                
+                @media screen and (max-width:1000px){
+                    text-align: center;
+                }
+                
+            }
+            
+            &:nth-child(2){
+                text-align: right;
+                
+                a, a:visited{
+                    text-decoration: none;
+                    color: #fff;
+                    text-transform: uppercase;
+                    transition: all ease 0.3s;
+                    
+                    &:hover{
+                        transition: all ease 0.3s;
+                        border-bottom: 1px solid rgba(255,255,255,0.5);
+                    }
+                    
+                }
+                
+                @media screen and (max-width:1000px){
+                    display: none;
+                }
+                
+            }
+        }
+        
+    }
+    
+}
