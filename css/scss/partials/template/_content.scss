@@ -14,7 +14,7 @@
         article {
             padding: 10px;
             padding-right: 50px;
-            width: auto;
+            flex-basis: 70%;
             flex-grow: 2;
             @media screen and (max-width: 1000px) {
                 width: 100%;
