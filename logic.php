@@ -17,6 +17,7 @@ $doc->addScript($tpath.'/js/lib/superfish/superfish.js');
 $doc->addScript($tpath.'/js/lib/center/center.min.js');
 $doc->addScript($tpath.'/js/lib/trmix/trmix.min.js');
 $doc->addScript($tpath.'/js/lib/bigslide/bigSlide.js');
+$doc->addScript($tpath.'/js/lib/cookie/cookie.min.js');
 $doc->addScript($tpath.'/js/logic.js');
 
 //template js-css
