@@ -32,15 +32,22 @@ jQuery(document).ready(function ($) {
         jQuery('.module-wrapper.tel').fadeOut();
     })
 
-    jQuery('.cookie').fadeIn(function () {
-        jQuery('html, body').css({
-            'overflow': 'hidden',
-            'height': '100%'
+
+
+    if (Cookies.get('cookie') != 1) {
+        jQuery('.cookie').fadeIn(function () {
+            jQuery('html, body').css({
+                'overflow': 'hidden',
+                'height': '100%'
+            });
+            jQuery('.cookie-info').center();
         });
-        jQuery('.cookie-info').center();
-    });
+    }
 
     jQuery('.close-cookie').on('click', function () {
+        Cookies.set('cookie', '1', {
+            expires: 365
+        });
         jQuery('.cookie').fadeOut();
         jQuery('html, body').css({
             'overflow': 'initial',
