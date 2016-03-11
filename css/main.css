@@ -402,6 +402,10 @@ body {
             margin: 5px auto;
             padding: 0;
             background: rgba(170, 170, 170, 0.2) none repeat scroll 0% 0%;
+            background-image: url("../images/template/link.png");
+            background-repeat: no-repeat;
+            background-size: 15px;
+            background-position: 97%;
             transition: all 300ms ease-out 0s; }
             .footer .container .grid .grid-row .footer-menu li a {
               font-family: "PT Sans", Courier, sans-serif;
@@ -416,6 +420,10 @@ body {
               background: rgba(170, 170, 170, 0) none repeat scroll 0% 0%; }
             .footer .container .grid .grid-row .footer-menu li:hover {
               background: rgba(170, 170, 170, 0.5) none repeat scroll 0% 0%;
+              background-image: url("../images/template/link.png");
+              background-repeat: no-repeat;
+              background-size: 15px;
+              background-position: 97%;
               transition: all 300ms ease-out 0s;
               border-radius: 5px; }
         .footer .container .grid .grid-row .form-wrapper {
@@ -482,12 +490,14 @@ body {
             text-align: center; } }
       .end .grid .grid-row:nth-child(2) {
         text-align: right; }
-        .end .grid .grid-row:nth-child(2) a, .end .grid .grid-row:nth-child(2) a:visited {
+        .end .grid .grid-row:nth-child(2) a,
+        .end .grid .grid-row:nth-child(2) a:visited {
           text-decoration: none;
           color: #fff;
           text-transform: uppercase;
           transition: all ease 0.3s; }
-          .end .grid .grid-row:nth-child(2) a:hover, .end .grid .grid-row:nth-child(2) a:visited:hover {
+          .end .grid .grid-row:nth-child(2) a:hover,
+          .end .grid .grid-row:nth-child(2) a:visited:hover {
             transition: all ease 0.3s;
             border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
         @media screen and (max-width: 1000px) {
