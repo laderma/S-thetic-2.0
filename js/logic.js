@@ -20,7 +20,7 @@ jQuery(document).ready(function ($) {
             'overflow': 'hidden',
             'height': '100%'
         });
-        jQuery('.module-wrapper').fadeIn();
+        jQuery('.module-wrapper.tel').fadeIn();
         jQuery('.choose-tel').center();
     });
 
@@ -29,7 +29,23 @@ jQuery(document).ready(function ($) {
             'overflow': 'initial',
             'height': '100%'
         });
-        jQuery('.module-wrapper').fadeOut();
+        jQuery('.module-wrapper.tel').fadeOut();
     })
-    
+
+    jQuery('.cookie').fadeIn(function () {
+        jQuery('html, body').css({
+            'overflow': 'hidden',
+            'height': '100%'
+        });
+        jQuery('.cookie-info').center();
+    });
+
+    jQuery('.close-cookie').on('click', function () {
+        jQuery('.cookie').fadeOut();
+        jQuery('html, body').css({
+            'overflow': 'initial',
+            'height': '100%'
+        });
+    })
+
 });

@@ -503,6 +503,43 @@ body {
   background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%;
   z-index: 2;
   overflow: hidden; }
+  .module-wrapper .cookie-info {
+    margin: 0 auto;
+    width: 400px;
+    height: auto;
+    z-index: 3; }
+    .module-wrapper .cookie-info h2 {
+      display: block;
+      text-align: center;
+      font-family: "PT Sans", Courier, sans-serif;
+      font-weight: 300;
+      color: white;
+      font-size: 20px;
+      background: rgba(255, 255, 255, 0.21) none repeat scroll 0% 0%;
+      padding: 10px;
+      border-radius: 3px; }
+    .module-wrapper .cookie-info p {
+      text-align: justify;
+      font-family: "PT Sans", Courier, sans-serif;
+      font-weight: 300;
+      color: #fff; }
+    .module-wrapper .cookie-info .button {
+      display: block;
+      width: auto;
+      padding: 10px;
+      border-radius: 3px;
+      font-family: "PT Sans", Courier, sans-serif;
+      font-weight: 300;
+      color: #fff;
+      text-align: center;
+      background-color: rgba(106, 177, 19, 0.5);
+      text-transform: uppercase;
+      text-decoration: none;
+      opacity: 0.7;
+      transition: all ease 0.3s; }
+      .module-wrapper .cookie-info .button:hover {
+        transition: all ease 0.3s;
+        opacity: 1; }
   .module-wrapper .choose-tel {
     margin: 0 auto;
     width: 400px;
@@ -538,7 +575,9 @@ body {
         padding: 10px;
         font-size: 20px;
         transition: all ease 0.3s; }
-        .module-wrapper .choose-tel ul li a, .module-wrapper .choose-tel ul li a:hover, .module-wrapper .choose-tel ul li a:visited {
+        .module-wrapper .choose-tel ul li a,
+        .module-wrapper .choose-tel ul li a:hover,
+        .module-wrapper .choose-tel ul li a:visited {
           text-decoration: none;
           color: #fff; }
         .module-wrapper .choose-tel ul li:hover {

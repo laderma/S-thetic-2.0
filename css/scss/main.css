@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300);
 html,
 body {
   position: relative;
@@ -9,7 +10,9 @@ body {
   font-family: "PT Sans", Courier, sans-serif;
   font-style: normal;
   font-weight: normal;
-  line-height: 1.5; }
+  line-height: 1.5;
+  max-width: 100%;
+  overflow-x: hidden; }
 
 .hide {
   display: none; }
@@ -22,7 +25,7 @@ body {
 .header {
   margin: 0 auto;
   width: 100%;
-  height: 60px;
+  height: 10px;
   padding: 10px 0px 10px 0px;
   background: url("../images/template/header-bg.PNG") center repeat scroll;
   border-top: 1px solid #FFF;
@@ -45,16 +48,35 @@ body {
       position: relative; }
       .header .grid .grid-row:nth-child(1) {
         flex-grow: initial; }
-      .header .grid .grid-row:nth-child(2) .sf-menu {
-        margin-left: 50px;
-        margin-top: 5px; }
+      .header .grid .grid-row:nth-child(2) {
+        flex-basis: 65%;
+        padding: 5px 0px 0px 50px; }
+        .header .grid .grid-row:nth-child(2) .sf-menu {
+          margin: 0 auto;
+          width: 100%;
+          display: -webkit-box;
+          /* OLD - iOS 6-, Safari 3.1-6 */
+          display: -moz-box;
+          /* OLD - Firefox 19- (buggy but     mostly works) */
+          display: -ms-flexbox;
+          /* TWEENER - IE 10 */
+          display: -webkit-flex;
+          /* NEW - Chrome */
+          display: flex;
+          /* NEW, Spec - Opera 12.1, Firefox 20+     */ }
+          .header .grid .grid-row:nth-child(2) .sf-menu li {
+            flex-grow: 1; }
+          @media screen and (max-width: 1200px) {
+            .header .grid .grid-row:nth-child(2) .sf-menu {
+              display: none; } }
       .header .grid .grid-row:nth-child(3) .tel-info {
         display: block;
         float: right;
         width: auto;
         height: auto;
         padding: 10px;
-        background: rgba(0, 0, 0, 0.05) none repeat scroll 0% 0%;
+        background-color: rgba(106, 177, 19, 0.5);
+        color: #fff;
         transition: all ease 0.3s; }
         .header .grid .grid-row:nth-child(3) .tel-info .tel-icon {
           margin: 4px 10px 5px 5px;
@@ -89,16 +111,16 @@ body {
     padding: 10px;
     position: absolute;
     bottom: 10px;
-    left: 100px;
+    left: 5%;
     background: rgba(0, 0, 0, 0.34);
     border-radius: 5px; }
     .slider .slider-content h1 {
-      font-size: 5rem;
-      line-height: 5.625rem;
+      font-size: 5vh;
       font-family: "PT Sans", Courier, sans-serif;
       font-weight: 700;
       color: #fff;
-      display: inline; }
+      display: inline;
+      margin: 0; }
     .slider .slider-content p {
       font-family: "PT Sans", Courier, sans-serif;
       font-weight: 300;
@@ -123,14 +145,20 @@ body {
     display: flex;
     /* NEW, Spec - Opera 12.1, Firefox 20+     */
     padding: 10px; }
+    @media screen and (max-width: 1000px) {
+      .wrapper .content-wrapper {
+        flex-direction: column; } }
     .wrapper .content-wrapper article {
       padding: 10px;
       padding-right: 50px;
-      width: 70%; }
+      width: auto;
+      flex-grow: 2; }
+      @media screen and (max-width: 1000px) {
+        .wrapper .content-wrapper article {
+          width: 100%; } }
       .wrapper .content-wrapper article h1 {
         color: rgba(0, 0, 0, 0.72);
         font-size: 2.0625rem;
-        height: 40px;
         text-transform: uppercase;
         margin: 5px auto;
         font-family: "PT Sans", Courier, sans-serif;
@@ -138,7 +166,6 @@ body {
       .wrapper .content-wrapper article h2 {
         color: rgba(0, 0, 0, 0.72);
         font-size: 1.5625rem;
-        height: 40px;
         text-transform: uppercase;
         margin: 5px auto;
         font-family: "PT Sans", Courier, sans-serif;
@@ -146,28 +173,69 @@ body {
       .wrapper .content-wrapper article h3 {
         color: rgba(0, 0, 0, 0.72);
         font-size: 1.0625rem;
-        height: 40px;
         text-transform: uppercase;
         margin: 5px auto;
         font-family: "PT Sans", Courier, sans-serif;
         font-weight: 700; }
+      .wrapper .content-wrapper article a,
+      .wrapper .content-wrapper article a:visited {
+        text-decoration: none;
+        color: #000;
+        text-transform: uppercase; }
+        .wrapper .content-wrapper article a:hover,
+        .wrapper .content-wrapper article a:visited:hover {
+          transition: all ease 0.3s;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+      @media screen and (max-width: 400px) {
+        .wrapper .content-wrapper article h1,
+        .wrapper .content-wrapper article h2,
+        .wrapper .content-wrapper article h3 {
+          word-break: break-all; } }
+    .wrapper .content-wrapper .left-sidebar {
+      width: 30%;
+      display: none; }
+      @media screen and (min-width: 1500px) {
+        .wrapper .content-wrapper .left-sidebar {
+          display: block; } }
     .wrapper .content-wrapper aside {
       width: 30%; }
+      @media screen and (max-width: 1000px) {
+        .wrapper .content-wrapper aside {
+          width: 100%; } }
       .wrapper .content-wrapper aside h3 {
-        color: #B3636E;
-        font-size: 1.5625rem;
-        height: 40px;
+        color: #000;
+        font-size: 2.5vh;
         text-transform: uppercase;
         margin: 5px auto;
-        font-family: "PT Sans", Courier, sans-serif;
-        font-weight: 700; }
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 300;
+        text-align: center;
+        background: RGBA(0, 0, 0, 0.05);
+        padding: 5px 0px 0px 0px;
+        border-style: solid;
+        border-width: 4px 0px 0px;
+        border-image: url("../images/template/gradient.jpg") 4 0 0 0 stretch repeat; }
       .wrapper .content-wrapper aside .map {
         margin: 0 auto;
-        width: 95%;
+        width: 100%;
         height: auto;
         padding: 10px 0px 10px 0px;
-        background: rgba(0, 0, 0, 0.05);
-        border: 1px solid rgba(0, 0, 0, 0.16); }
+        background: rgba(0, 0, 0, 0.05); }
+        .wrapper .content-wrapper aside .map h3 {
+          color: #000;
+          font-size: 2.5vh;
+          text-transform: uppercase;
+          margin: 0;
+          font-family: "Source Sans Pro", sans-serif;
+          font-weight: 300;
+          text-align: center;
+          position: relative;
+          top: -10px;
+          background: RGBA(0, 0, 0, 0.05);
+          padding: 5px 0px 0px 0px;
+          border-style: solid;
+          border-width: 4px 0px 0px;
+          border-image: url("../images/template/gradient.jpg") 4 0 0 0 stretch repeat; }
         .wrapper .content-wrapper aside .map .grid-wrapper {
           margin: 0 auto;
           width: 100%;
@@ -219,13 +287,11 @@ body {
             opacity: 1;
             cursor: pointer; }
       .wrapper .content-wrapper aside .aside-box {
+        margin: 0 auto;
         display: block;
-        width: 450px;
+        width: 100%;
         height: 250px;
         position: relative; }
-        @media screen and (max-width: 1500px) {
-          .wrapper .content-wrapper aside .aside-box {
-            width: 100%; } }
         .wrapper .content-wrapper aside .aside-box .filter {
           display: block;
           min-width: 100%;
@@ -234,22 +300,44 @@ body {
           transition: all linear 0.3s; }
           .wrapper .content-wrapper aside .aside-box .filter:hover {
             background: rgba(0, 0, 0, 0.15); }
-          .wrapper .content-wrapper aside .aside-box .filter h3 {
-            color: #fff;
-            position: absolute;
-            left: 5px;
-            bottom: 80px;
-            text-decoration: none; }
-          .wrapper .content-wrapper aside .aside-box .filter p {
+          .wrapper .content-wrapper aside .aside-box .filter .grid {
             margin: 0 auto;
-            width: 95%;
-            color: #fff;
-            text-decoration: none;
+            width: 100%;
+            height: auto;
+            display: -webkit-box;
+            /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box;
+            /* OLD - Firefox 19- (buggy but     mostly works) */
+            display: -ms-flexbox;
+            /* TWEENER - IE 10 */
+            display: -webkit-flex;
+            /* NEW - Chrome */
+            display: flex;
+            /* NEW, Spec - Opera 12.1, Firefox 20+     */
+            flex-direction: column;
             position: absolute;
-            left: 5px;
-            bottom: 10px;
-            font-family: "PT Sans", Courier, sans-serif;
-            font-weight: 300; }
+            left: 0;
+            bottom: 0;
+            padding: 5px; }
+            .wrapper .content-wrapper aside .aside-box .filter .grid .grid-row {
+              width: 100%;
+              height: auto; }
+              .wrapper .content-wrapper aside .aside-box .filter .grid .grid-row h3 {
+                all: initial;
+                font-family: "PT Sans", Courier, sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #fff;
+                text-decoration: none;
+                position: relative;
+                left: 10px; }
+              .wrapper .content-wrapper aside .aside-box .filter .grid .grid-row p {
+                margin: 0 auto;
+                width: 95%;
+                color: #fff;
+                text-decoration: none;
+                font-family: "PT Sans", Courier, sans-serif;
+                font-weight: 300; }
 
 .footer {
   margin: 0 auto;
@@ -286,15 +374,23 @@ body {
       display: flex;
       /* NEW, Spec - Opera 12.1, Firefox 20+     */
       flex-grow: 1; }
+      @media screen and (max-width: 1000px) {
+        .footer .container .grid {
+          flex-direction: column; } }
       .footer .container .grid .grid-row {
         flex-grow: 1;
-        padding: 0px 50px 0px 50px; }
+        padding: 10px; }
         .footer .container .grid .grid-row h2 {
           font-size: 1.875rem;
           font-family: "PT Sans", Courier, sans-serif;
           font-weight: 700;
           text-transform: uppercase;
           color: rgba(0, 0, 0, 0.72); }
+          .footer .container .grid .grid-row h2 .icon {
+            float: left;
+            position: relative;
+            top: 5px;
+            margin: 5px; }
         .footer .container .grid .grid-row .footer-menu {
           list-style-type: none;
           margin: 0;
@@ -339,7 +435,7 @@ body {
             /* NEW, Spec - Opera 12.1, Firefox 20+     */
             flex-direction: column; }
             .footer .container .grid .grid-row .form-wrapper .grid .grid-row {
-              width: 400px;
+              width: auto;
               flex-grow: 1;
               padding: initial; }
               @media screen and (max-width: 1500px) {
@@ -347,6 +443,56 @@ body {
                   width: 100%; } }
         .footer .container .grid .grid-row:nth-child(2) {
           flex-grow: 2; }
+
+.end {
+  margin: 0 auto;
+  width: 100%;
+  padding: 15px 0px 15px 0px;
+  background: rgba(0, 0, 0, 0.5); }
+  .end .grid {
+    margin: 0 auto;
+    width: 90%;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but     mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+     */ }
+    @media screen and (max-width: 1000px) {
+      .end .grid {
+        flex-direction: column; } }
+    .end .grid .grid-row {
+      width: 50%;
+      flex-grow: 1;
+      color: #fff;
+      font-family: "PT Sans", Courier, sans-serif;
+      font-weight: 300; }
+      @media screen and (max-width: 1000px) {
+        .end .grid .grid-row {
+          width: 100%; } }
+      .end .grid .grid-row:first-child {
+        text-align: left;
+        text-transform: uppercase; }
+        @media screen and (max-width: 1000px) {
+          .end .grid .grid-row:first-child {
+            text-align: center; } }
+      .end .grid .grid-row:nth-child(2) {
+        text-align: right; }
+        .end .grid .grid-row:nth-child(2) a, .end .grid .grid-row:nth-child(2) a:visited {
+          text-decoration: none;
+          color: #fff;
+          text-transform: uppercase;
+          transition: all ease 0.3s; }
+          .end .grid .grid-row:nth-child(2) a:hover, .end .grid .grid-row:nth-child(2) a:visited:hover {
+            transition: all ease 0.3s;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+        @media screen and (max-width: 1000px) {
+          .end .grid .grid-row:nth-child(2) {
+            display: none; } }
 
 .module-wrapper {
   display: none;
@@ -392,15 +538,32 @@ body {
         padding: 10px;
         font-size: 20px;
         transition: all ease 0.3s; }
-        .module-wrapper .choose-tel ul li a, .module-wrapper .choose-tel ul li a:hover, .module-wrapper .choose-tel ul li a:visited {
+        .module-wrapper .choose-tel ul li a,
+        .module-wrapper .choose-tel ul li a:hover,
+        .module-wrapper .choose-tel ul li a:visited {
           text-decoration: none;
           color: #fff; }
         .module-wrapper .choose-tel ul li:hover {
           transition: all ease 0.3s;
           font-size: 25px;
           cursor: pointer; }
+  .module-wrapper .cookie-info {
+    margin: 0 auto;
+    width: 400px;
+    height: auto;
+    z-index: 3; }
+    .module-wrapper .cookie-info h2 {
+      display: block;
+      text-align: center;
+      font-family: "PT Sans", Courier, sans-serif;
+      font-weight: 300;
+      color: white;
+      font-size: 20px;
+      background: rgba(255, 255, 255, 0.21) none repeat scroll 0% 0%;
+      padding: 10px;
+      border-radius: 3px; }
 
-input[type=text], input[type=email], input[type=submit], textarea {
+input[type=text], input[type=email], input[type=submit], textarea, select {
   padding-left: 45px;
   background-color: rgba(202, 202, 200, 0.5);
   box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.15), 0px 1px 0px rgba(255, 255, 255, 0.1);
@@ -434,6 +597,9 @@ input[type=submit] {
   background-color: rgba(106, 177, 19, 0.5);
   color: #fff; }
 
+select {
+  color: rgba(0, 0, 0, 0.5); }
+
 input[type="text"]:focus,
 input[type="text"]:hover,
 input[type="password"]:focus,
@@ -464,7 +630,9 @@ input[type="color"]:focus,
 input[type="color"]:hover,
 input[type="submit"]:hover,
 textarea:focus,
-textarea:hover {
+textarea:hover,
+select:focus,
+select:hover {
   background: #BFBFBB none repeat scroll 0% 0%;
   border-color: #999;
   outline: medium none;

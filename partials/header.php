@@ -14,7 +14,7 @@
 
 <body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site')).' '.$active->alias.' '.$pageclass; ?> push">
 
-    <div id="" class="module-wrapper" style="">
+    <div id="" class="module-wrapper tel" style="">
         <div id="" class="choose-tel" style="">
             <h2>Wählen Sie einen Standort</h2>
             <ul>
@@ -28,6 +28,14 @@
                 <li><a href="#">Nürnberg</a></li>
             </ul>
             <span class="close-module"><img src="http://webdev.laderma.net/x/templates/s-thetic.de2.0/images/template/close.png" /></span>
+        </div>
+    </div>
+    
+    <div id="" class="module-wrapper cookie" style="">
+        <div id="" class="cookie-info" style="">
+            <h2>Wichtige Informationen zu Cookies</h2>
+            <p>Zur Verbesserung Ihrer Benutzererlebnisses verwenden wir auf dieser Webseite Cookies. Wenn Sie diese Webseite weiterhin besuchen, erklären Sie sich damit einverstanden. Wir freuen uns auf Ihren Besuch! Ihr S-thetic.de - Team</p>
+            <a href="#" class="close-cookie button">Ich bin einverstanden</a>
         </div>
     </div>
 
