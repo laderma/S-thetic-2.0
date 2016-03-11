@@ -13,7 +13,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/partials/header.php';
                 <jdoc:include type="component" />
             </article>
             <aside>
-                <h3>Aktuelles</h3>
+                <h3>Aktuelles2</h3>
 
                 <a href="www.google.de">
                     <div id="" class="aside-box" style="background:url(http://s-thetic.de/images/carousel/E2_Aerzte_Main-Fatemi-kommtneu.jpg);background-size:cover;">
