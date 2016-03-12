@@ -18,10 +18,12 @@ $doc->addScript($tpath.'/js/lib/center/center.min.js');
 $doc->addScript($tpath.'/js/lib/trmix/trmix.min.js');
 $doc->addScript($tpath.'/js/lib/bigslide/bigSlide.js');
 $doc->addScript($tpath.'/js/lib/cookie/js.cookie.min.js');
+$doc->addScript($tpath.'/js/lib/vegas/vegas.min.js');
 $doc->addScript($tpath.'/js/logic.js');
 
 //template js-css
 $doc->addStyleSheet($tpath.'/js/lib/superfish/superfish.css');
+$doc->addStyleSheet($tpath.'/js/lib/vegas/vegas.min.css');
 
 
 // template css

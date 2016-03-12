@@ -14,7 +14,7 @@
 .sf-menu ul {
     position: absolute;
     display: none;
-    top: 127%;
+    top: 118%;
     left: 0;
     z-index: 99;
     -webkit-box-shadow: 10px 10px 5px -11px rgba(0, 0, 0, 0.75);
@@ -87,11 +87,14 @@
     /* ...unless you support IE7 (let it wrap) */
     -webkit-transition: background .2s;
     transition: background .2s;
-    border-radius: 3px;
+    border-top: 4px solid transparent;
 }
 
-.sf-menu > li:hover{
-     background: rgba(0, 0, 0, 0.05);   
+.sf-menu > li:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-style: solid;
+    border-width: 4px 0 0;
+    border-image: url(../../../images/template/gradient.jpg) 4 0 0 0 stretch repeat;
 }
 
 .sf-menu ul li {
@@ -126,6 +129,9 @@
 
 .sf-menu > .active {
     background: rgba(0, 0, 0, 0.05);
+    border-style: solid;
+    border-width: 4px 0 0;
+    border-image: url(../../../images/template/gradient.jpg) 4 0 0 0 stretch repeat;
 }
 
 

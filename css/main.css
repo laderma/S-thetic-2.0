@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300);
 html,
@@ -75,7 +76,7 @@ body {
         width: auto;
         height: auto;
         padding: 10px;
-        background-color: rgba(106, 177, 19, 0.5);
+        background-color: rgba(48, 83, 5, 0.5);
         color: #fff;
         transition: all ease 0.3s; }
         .header .grid .grid-row:nth-child(3) .tel-info .tel-icon {
@@ -101,30 +102,103 @@ body {
 .slider {
   margin: 0 auto;
   width: 100%;
-  height: 400px;
+  min-height: calc(100vh - 85px);
   background: url(http://www.s-thetic.de/images/carousel/neu/E1-START_Aesth-mit-OP-MAIN-Koerper.jpg) top no-repeat fixed;
   background-size: cover;
   position: relative; }
-  .slider .slider-content {
-    margin: 0px auto;
+  .slider .grid {
+    margin: 0 auto;
     width: 90%;
-    padding: 10px;
-    position: absolute;
-    bottom: 10px;
-    left: 5%;
-    background: rgba(0, 0, 0, 0.34);
-    border-radius: 5px; }
-    .slider .slider-content h1 {
-      font-size: 5vh;
-      font-family: "PT Sans", Courier, sans-serif;
-      font-weight: 700;
-      color: #fff;
-      display: inline;
-      margin: 0; }
-    .slider .slider-content p {
-      font-family: "PT Sans", Courier, sans-serif;
-      font-weight: 300;
-      color: #fff; }
+    height: auto;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but     mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+     */
+    padding: 2% 0px 0px 0px; }
+    @media screen and (max-width: 1000px) {
+      .slider .grid {
+        flex-direction: column; } }
+    .slider .grid .grid-row {
+      width: 50%;
+      flex-grow: 1;
+      padding: 10px;
+      /*Fix f├╝r Slider-Kontaktformular auf Handys*/ }
+      @media screen and (max-width: 1000px) {
+        .slider .grid .grid-row {
+          width: 100%; } }
+      @media screen and (max-width: 400px) {
+        .slider .grid .grid-row {
+          padding: 0; } }
+      @media screen and (max-width: 400px) {
+        .slider .grid .grid-row:nth-child(1) {
+          display: none; } }
+      .slider .grid .grid-row:nth-child(1) h2 {
+        font-size: 5vh;
+        font-family: "Source Sans Pro";
+        font-weight: 300;
+        color: #fff;
+        display: inline;
+        margin: 0; }
+      .slider .grid .grid-row:nth-child(1) p {
+        font-family: "PT Sans", Courier, sans-serif;
+        font-weight: 300;
+        color: #fff;
+        font-size: 2.2vh; }
+      .slider .grid .grid-row:nth-child(2) .form-wrapper {
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        background: rgba(0, 0, 0, 0.72) none repeat scroll 0px 0px;
+        padding: 25px 0px 0px 0px;
+        border-radius: 3px; }
+        .slider .grid .grid-row:nth-child(2) .form-wrapper h2 {
+          font-family: "Source Sans Pro";
+          font-weight: 300;
+          color: #FFF;
+          display: block;
+          font-size: 2.7vh;
+          width: 100%;
+          text-align: center;
+          margin: 0px auto;
+          position: relative;
+          top: -25px;
+          padding: 5px 0px;
+          background: rgba(191, 27, 54, 0.56);
+          text-transform: uppercase; }
+        .slider .grid .grid-row:nth-child(2) .form-wrapper .grid {
+          display: -webkit-box;
+          /* OLD - iOS 6-, Safari 3.1-6 */
+          display: -moz-box;
+          /* OLD - Firefox 19- (buggy but     mostly works) */
+          display: -ms-flexbox;
+          /* TWEENER - IE 10 */
+          display: -webkit-flex;
+          /* NEW - Chrome */
+          display: flex;
+          /* NEW, Spec - Opera 12.1, Firefox 20+     */
+          flex-direction: column; }
+          .slider .grid .grid-row:nth-child(2) .form-wrapper .grid .grid-row {
+            width: auto;
+            flex-grow: 1;
+            padding: initial; }
+            .slider .grid .grid-row:nth-child(2) .form-wrapper .grid .grid-row input[type]:not([type=submit]),
+            .slider .grid .grid-row:nth-child(2) .form-wrapper .grid .grid-row input[type]:hover,
+            .slider .grid .grid-row:nth-child(2) .form-wrapper .grid .grid-row textarea,
+            .slider .grid .grid-row:nth-child(2) .form-wrapper .grid .grid-row textarea:hover,
+            .slider .grid .grid-row:nth-child(2) .form-wrapper .grid .grid-row select,
+            .slider .grid .grid-row:nth-child(2) .form-wrapper .grid .grid-row select:hover {
+              background-color: #CACAC8; }
+            .slider .grid .grid-row:nth-child(2) .form-wrapper .grid .grid-row input[type="submit"] {
+              background-color: rgba(145, 182, 101, 0.5); }
+            @media screen and (max-width: 1500px) {
+              .slider .grid .grid-row:nth-child(2) .form-wrapper .grid .grid-row {
+                width: 100%; } }
 
 .wrapper {
   margin: 0 auto;
@@ -564,7 +638,8 @@ body {
       font-size: 20px;
       background: rgba(255, 255, 255, 0.21) none repeat scroll 0% 0%;
       padding: 10px;
-      border-radius: 3px; }
+      border-radius: 3px;
+      text-transform: uppercase; }
     .module-wrapper .choose-tel .close-module {
       cursor: pointer; }
       .module-wrapper .choose-tel .close-module img {
@@ -630,7 +705,7 @@ textarea {
   width: 100% !important; }
 
 input[type=submit] {
-  background-color: rgba(106, 177, 19, 0.5);
+  background-color: rgba(48, 83, 5, 0.5);
   color: #fff; }
 
 select {
